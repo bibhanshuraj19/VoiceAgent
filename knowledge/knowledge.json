@@ -1,0 +1,943 @@
+{
+  "undergraduate_degrees": {
+    "arts": {
+      "stream_name": "Arts and Humanities",
+      "common_degree": "Bachelor of Arts (BA)",
+      "duration": "3 years",
+      "specializations": [
+        "English Literature",
+        "Hindi Literature",
+        "Sanskrit",
+        "History",
+        "Political Science",
+        "Economics",
+        "Psychology",
+        "Sociology",
+        "Philosophy",
+        "Geography",
+        "Journalism and Mass Communication",
+        "Fine Arts",
+        "Music",
+        "Anthropology",
+        "Public Administration",
+        "Social Work",
+        "Library Science",
+        "Linguistics",
+        "Foreign Languages (French, German, Spanish, etc.)"
+      ],
+      "other_degrees": [
+        {
+          "name": "Bachelor of Fine Arts (BFA)",
+          "duration": "3-4 years",
+          "specializations": ["Painting", "Sculpture", "Applied Arts", "Graphic Design"]
+        },
+        {
+          "name": "Bachelor of Social Work (BSW)",
+          "duration": "3 years"
+        },
+        {
+          "name": "Bachelor of Journalism (BJ)",
+          "duration": "3 years"
+        },
+        {
+          "name": "Bachelor of Design (B.Des)",
+          "duration": "4 years",
+          "specializations": ["Fashion Design", "Interior Design", "Product Design", "Communication Design"]
+        }
+      ]
+    },
+    "commerce": {
+      "stream_name": "Commerce and Business",
+      "common_degree": "Bachelor of Commerce (B.Com)",
+      "duration": "3 years",
+      "specializations": [
+        "Accounting and Finance",
+        "Banking and Insurance",
+        "Taxation",
+        "Business Management",
+        "E-Commerce",
+        "Marketing",
+        "Corporate Secretaryship",
+        "Cost Accounting"
+      ],
+      "other_degrees": [
+        {
+          "name": "Bachelor of Business Administration (BBA)",
+          "duration": "3 years",
+          "specializations": ["Finance", "Marketing", "Human Resources", "International Business", "Operations"]
+        },
+        {
+          "name": "Bachelor of Management Studies (BMS)",
+          "duration": "3 years"
+        },
+        {
+          "name": "Bachelor of Business Management (BBM)",
+          "duration": "3 years"
+        },
+        {
+          "name": "Chartered Accountancy (CA)",
+          "duration": "4-5 years",
+          "type": "Professional Course"
+        },
+        {
+          "name": "Company Secretary (CS)",
+          "duration": "3-4 years",
+          "type": "Professional Course"
+        },
+        {
+          "name": "Cost and Management Accountant (CMA)",
+          "duration": "3-4 years",
+          "type": "Professional Course"
+        }
+      ]
+    },
+    "science": {
+      "stream_name": "Science",
+      "common_degree": "Bachelor of Science (B.Sc)",
+      "duration": "3 years",
+      "branches": {
+        "computer_science": {
+          "branch_name": "Computer Science and IT",
+          "specializations": [
+            "Computer Science",
+            "Information Technology",
+            "Computer Applications",
+            "Data Science",
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Cyber Security",
+            "Cloud Computing",
+            "Software Engineering"
+          ],
+          "professional_degrees": [
+            {
+              "name": "Bachelor of Computer Applications (BCA)",
+              "duration": "3 years"
+            }
+          ]
+        },
+        "physics": {
+          "branch_name": "Physics",
+          "specializations": [
+            "Physics (General)",
+            "Applied Physics",
+            "Electronics",
+            "Nuclear Physics",
+            "Astrophysics",
+            "Medical Physics"
+          ]
+        },
+        "chemistry": {
+          "branch_name": "Chemistry",
+          "specializations": [
+            "Chemistry (General)",
+            "Analytical Chemistry",
+            "Organic Chemistry",
+            "Inorganic Chemistry",
+            "Physical Chemistry",
+            "Industrial Chemistry",
+            "Pharmaceutical Chemistry"
+          ]
+        },
+        "mathematics": {
+          "branch_name": "Mathematics",
+          "specializations": [
+            "Mathematics (General)",
+            "Applied Mathematics",
+            "Statistics",
+            "Actuarial Science",
+            "Operations Research"
+          ]
+        },
+        "biology": {
+          "branch_name": "Biological Sciences",
+          "specializations": [
+            "Botany",
+            "Zoology",
+            "Microbiology",
+            "Biotechnology",
+            "Biochemistry",
+            "Molecular Biology",
+            "Genetics",
+            "Bioinformatics",
+            "Life Sciences"
+          ]
+        },
+        "environmental_science": {
+          "branch_name": "Environmental Sciences",
+          "specializations": [
+            "Environmental Science",
+            "Ecology",
+            "Marine Biology",
+            "Forestry",
+            "Wildlife Science",
+            "Climate Science"
+          ]
+        },
+        "agriculture": {
+          "branch_name": "Agricultural Sciences",
+          "specializations": [
+            "Agriculture",
+            "Horticulture",
+            "Agricultural Economics",
+            "Soil Science",
+            "Plant Pathology",
+            "Entomology"
+          ],
+          "professional_degrees": [
+            {
+              "name": "Bachelor of Science in Agriculture (B.Sc Ag)",
+              "duration": "4 years"
+            }
+          ]
+        },
+        "food_technology": {
+          "branch_name": "Food Technology",
+          "specializations": [
+            "Food Technology",
+            "Food Science",
+            "Nutrition and Dietetics"
+          ]
+        }
+      }
+    },
+    "engineering": {
+      "stream_name": "Engineering and Technology",
+      "common_degree": "Bachelor of Technology (B.Tech) / Bachelor of Engineering (B.E.)",
+      "duration": "4 years",
+      "branches": [
+        {
+          "name": "Computer Science Engineering",
+          "sub_specializations": ["AI & ML", "Data Science", "Cyber Security", "Cloud Computing"]
+        },
+        {
+          "name": "Information Technology"
+        },
+        {
+          "name": "Electronics and Communication Engineering"
+        },
+        {
+          "name": "Electrical Engineering",
+          "sub_specializations": ["Power Systems", "Control Systems", "Renewable Energy"]
+        },
+        {
+          "name": "Electrical and Electronics Engineering"
+        },
+        {
+          "name": "Mechanical Engineering",
+          "sub_specializations": ["Automotive", "Robotics", "Thermal Engineering"]
+        },
+        {
+          "name": "Civil Engineering",
+          "sub_specializations": ["Structural", "Transportation", "Environmental", "Construction Management"]
+        },
+        {
+          "name": "Chemical Engineering"
+        },
+        {
+          "name": "Aerospace Engineering"
+        },
+        {
+          "name": "Aeronautical Engineering"
+        },
+        {
+          "name": "Biotechnology Engineering"
+        },
+        {
+          "name": "Biomedical Engineering"
+        },
+        {
+          "name": "Automobile Engineering"
+        },
+        {
+          "name": "Industrial Engineering"
+        },
+        {
+          "name": "Production Engineering"
+        },
+        {
+          "name": "Manufacturing Engineering"
+        },
+        {
+          "name": "Instrumentation Engineering"
+        },
+        {
+          "name": "Petroleum Engineering"
+        },
+        {
+          "name": "Mining Engineering"
+        },
+        {
+          "name": "Agricultural Engineering"
+        },
+        {
+          "name": "Food Technology Engineering"
+        },
+        {
+          "name": "Textile Engineering"
+        },
+        {
+          "name": "Metallurgical Engineering"
+        },
+        {
+          "name": "Marine Engineering"
+        },
+        {
+          "name": "Robotics Engineering"
+        },
+        {
+          "name": "Mechatronics Engineering"
+        }
+      ]
+    },
+    "medical": {
+      "stream_name": "Medical and Health Sciences",
+      "degrees": [
+        {
+          "name": "Bachelor of Medicine, Bachelor of Surgery (MBBS)",
+          "duration": "5.5 years (including 1 year internship)",
+          "eligibility": "NEET qualified"
+        },
+        {
+          "name": "Bachelor of Dental Surgery (BDS)",
+          "duration": "5 years (including 1 year internship)",
+          "eligibility": "NEET qualified"
+        },
+        {
+          "name": "Bachelor of Ayurvedic Medicine and Surgery (BAMS)",
+          "duration": "5.5 years (including internship)",
+          "eligibility": "NEET qualified"
+        },
+        {
+          "name": "Bachelor of Homeopathic Medicine and Surgery (BHMS)",
+          "duration": "5.5 years (including internship)",
+          "eligibility": "NEET qualified"
+        },
+        {
+          "name": "Bachelor of Unani Medicine and Surgery (BUMS)",
+          "duration": "5.5 years (including internship)",
+          "eligibility": "NEET qualified"
+        },
+        {
+          "name": "Bachelor of Siddha Medicine and Surgery (BSMS)",
+          "duration": "5.5 years (including internship)",
+          "eligibility": "NEET qualified"
+        },
+        {
+          "name": "Bachelor of Naturopathy and Yogic Sciences (BNYS)",
+          "duration": "5.5 years (including internship)",
+          "eligibility": "NEET qualified"
+        },
+        {
+          "name": "Bachelor of Pharmacy (B.Pharm)",
+          "duration": "4 years"
+        },
+        {
+          "name": "Diploma in Pharmacy (D.Pharm)",
+          "duration": "2 years"
+        },
+        {
+          "name": "Bachelor of Physiotherapy (BPT)",
+          "duration": "4.5 years (including internship)"
+        },
+        {
+          "name": "Bachelor of Occupational Therapy (BOT)",
+          "duration": "4.5 years (including internship)"
+        },
+        {
+          "name": "Bachelor of Science in Nursing (B.Sc Nursing)",
+          "duration": "4 years"
+        },
+        {
+          "name": "General Nursing and Midwifery (GNM)",
+          "duration": "3.5 years",
+          "type": "Diploma"
+        },
+        {
+          "name": "Bachelor of Veterinary Science and Animal Husbandry (B.V.Sc & AH)",
+          "duration": "5 years (including internship)"
+        },
+        {
+          "name": "Bachelor of Medical Laboratory Technology (BMLT)",
+          "duration": "3-4 years"
+        },
+        {
+          "name": "Bachelor of Optometry",
+          "duration": "4 years"
+        },
+        {
+          "name": "Bachelor of Audiology and Speech-Language Pathology (BASLP)",
+          "duration": "4 years"
+        }
+      ]
+    },
+    "law": {
+      "stream_name": "Law",
+      "degrees": [
+        {
+          "name": "Bachelor of Laws (LLB)",
+          "duration": "3 years",
+          "eligibility": "After graduation"
+        },
+        {
+          "name": "Integrated BA LLB",
+          "duration": "5 years",
+          "eligibility": "After 12th"
+        },
+        {
+          "name": "Integrated B.Com LLB",
+          "duration": "5 years",
+          "eligibility": "After 12th"
+        },
+        {
+          "name": "Integrated BBA LLB",
+          "duration": "5 years",
+          "eligibility": "After 12th"
+        },
+        {
+          "name": "Integrated B.Sc LLB",
+          "duration": "5 years",
+          "eligibility": "After 12th"
+        }
+      ]
+    },
+    "architecture": {
+      "stream_name": "Architecture and Planning",
+      "degrees": [
+        {
+          "name": "Bachelor of Architecture (B.Arch)",
+          "duration": "5 years",
+          "eligibility": "NATA/JEE Main Paper 2 qualified"
+        },
+        {
+          "name": "Bachelor of Planning (B.Plan)",
+          "duration": "4 years"
+        }
+      ]
+    },
+    "hotel_management": {
+      "stream_name": "Hotel Management and Tourism",
+      "degrees": [
+        {
+          "name": "Bachelor of Hotel Management (BHM)",
+          "duration": "4 years"
+        },
+        {
+          "name": "Bachelor of Science in Hospitality and Hotel Administration (B.Sc HHA)",
+          "duration": "3 years"
+        },
+        {
+          "name": "Bachelor of Tourism Management",
+          "duration": "3 years"
+        }
+      ]
+    }
+  },
+  "postgraduate_degrees": {
+    "arts": {
+      "stream_name": "Arts and Humanities",
+      "common_degree": "Master of Arts (MA)",
+      "duration": "2 years",
+      "specializations": [
+        "English Literature",
+        "Hindi Literature",
+        "Sanskrit",
+        "History",
+        "Political Science",
+        "Economics",
+        "Psychology",
+        "Sociology",
+        "Philosophy",
+        "Geography",
+        "Journalism and Mass Communication",
+        "Public Administration",
+        "Social Work",
+        "Anthropology",
+        "Linguistics",
+        "International Relations",
+        "Development Studies",
+        "Gender Studies",
+        "Cultural Studies",
+        "Foreign Languages"
+      ],
+      "other_degrees": [
+        {
+          "name": "Master of Fine Arts (MFA)",
+          "duration": "2 years",
+          "specializations": ["Painting", "Sculpture", "Applied Arts", "Visual Arts"]
+        },
+        {
+          "name": "Master of Social Work (MSW)",
+          "duration": "2 years"
+        },
+        {
+          "name": "Master of Journalism (MJ)",
+          "duration": "2 years"
+        },
+        {
+          "name": "Master of Design (M.Des)",
+          "duration": "2 years"
+        }
+      ]
+    },
+    "commerce": {
+      "stream_name": "Commerce and Business",
+      "common_degree": "Master of Commerce (M.Com)",
+      "duration": "2 years",
+      "specializations": [
+        "Accounting",
+        "Finance",
+        "Banking",
+        "Taxation",
+        "Business Economics",
+        "Financial Markets",
+        "International Finance"
+      ],
+      "other_degrees": [
+        {
+          "name": "Master of Business Administration (MBA)",
+          "duration": "2 years",
+          "specializations": [
+            "Finance",
+            "Marketing",
+            "Human Resource Management",
+            "Operations Management",
+            "International Business",
+            "Information Technology",
+            "Supply Chain Management",
+            "Business Analytics",
+            "Healthcare Management",
+            "Rural Management",
+            "Financial Services",
+            "Retail Management",
+            "Banking and Finance",
+            "Digital Marketing",
+            "Entrepreneurship"
+          ]
+        },
+        {
+          "name": "Post Graduate Diploma in Management (PGDM)",
+          "duration": "2 years",
+          "note": "Offered by autonomous business schools"
+        },
+        {
+          "name": "Master of Management Studies (MMS)",
+          "duration": "2 years"
+        },
+        {
+          "name": "Master of Financial Management (MFM)",
+          "duration": "2 years"
+        }
+      ]
+    },
+    "science": {
+      "stream_name": "Science",
+      "common_degree": "Master of Science (M.Sc)",
+      "duration": "2 years",
+      "branches": {
+        "computer_science": {
+          "branch_name": "Computer Science and IT",
+          "specializations": [
+            "Computer Science",
+            "Information Technology",
+            "Software Engineering",
+            "Data Science",
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Cyber Security",
+            "Cloud Computing",
+            "Big Data Analytics",
+            "Network Security",
+            "Blockchain Technology"
+          ],
+          "professional_degrees": [
+            {
+              "name": "Master of Computer Applications (MCA)",
+              "duration": "2-3 years"
+            }
+          ]
+        },
+        "physics": {
+          "branch_name": "Physics",
+          "specializations": [
+            "Physics (General)",
+            "Applied Physics",
+            "Electronics",
+            "Nuclear Physics",
+            "Astrophysics",
+            "Condensed Matter Physics",
+            "Particle Physics",
+            "Medical Physics"
+          ]
+        },
+        "chemistry": {
+          "branch_name": "Chemistry",
+          "specializations": [
+            "Chemistry (General)",
+            "Analytical Chemistry",
+            "Organic Chemistry",
+            "Inorganic Chemistry",
+            "Physical Chemistry",
+            "Pharmaceutical Chemistry",
+            "Industrial Chemistry",
+            "Medicinal Chemistry"
+          ]
+        },
+        "mathematics": {
+          "branch_name": "Mathematics",
+          "specializations": [
+            "Mathematics (General)",
+            "Applied Mathematics",
+            "Statistics",
+            "Actuarial Science",
+            "Operations Research",
+            "Computational Mathematics"
+          ]
+        },
+        "biology": {
+          "branch_name": "Biological Sciences",
+          "specializations": [
+            "Botany",
+            "Zoology",
+            "Microbiology",
+            "Biotechnology",
+            "Biochemistry",
+            "Molecular Biology",
+            "Genetics",
+            "Bioinformatics",
+            "Cell Biology",
+            "Immunology",
+            "Neuroscience",
+            "Biophysics"
+          ]
+        },
+        "environmental_science": {
+          "branch_name": "Environmental Sciences",
+          "specializations": [
+            "Environmental Science",
+            "Ecology",
+            "Marine Biology",
+            "Wildlife Science",
+            "Climate Change",
+            "Renewable Energy"
+          ]
+        },
+        "agriculture": {
+          "branch_name": "Agricultural Sciences",
+          "specializations": [
+            "Agronomy",
+            "Horticulture",
+            "Agricultural Economics",
+            "Soil Science",
+            "Plant Pathology",
+            "Entomology",
+            "Plant Breeding and Genetics"
+          ]
+        },
+        "food_technology": {
+          "branch_name": "Food Technology",
+          "specializations": [
+            "Food Technology",
+            "Food Science and Nutrition",
+            "Nutrition and Dietetics"
+          ]
+        }
+      }
+    },
+    "engineering": {
+      "stream_name": "Engineering and Technology",
+      "common_degree": "Master of Technology (M.Tech) / Master of Engineering (M.E.)",
+      "duration": "2 years",
+      "branches": [
+        {
+          "name": "Computer Science and Engineering",
+          "specializations": [
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Data Science",
+            "Cyber Security",
+            "Cloud Computing",
+            "Software Engineering",
+            "Computer Networks"
+          ]
+        },
+        {
+          "name": "Information Technology",
+          "specializations": ["Software Engineering", "Information Security", "Data Analytics"]
+        },
+        {
+          "name": "Electronics and Communication Engineering",
+          "specializations": [
+            "VLSI Design",
+            "Embedded Systems",
+            "Signal Processing",
+            "Communication Systems",
+            "Microelectronics"
+          ]
+        },
+        {
+          "name": "Electrical Engineering",
+          "specializations": [
+            "Power Systems",
+            "Power Electronics",
+            "Control Systems",
+            "Electrical Machines",
+            "Renewable Energy"
+          ]
+        },
+        {
+          "name": "Mechanical Engineering",
+          "specializations": [
+            "Thermal Engineering",
+            "Design Engineering",
+            "Manufacturing Engineering",
+            "Robotics",
+            "Automotive Engineering",
+            "CAD/CAM"
+          ]
+        },
+        {
+          "name": "Civil Engineering",
+          "specializations": [
+            "Structural Engineering",
+            "Transportation Engineering",
+            "Environmental Engineering",
+            "Geotechnical Engineering",
+            "Construction Management",
+            "Water Resources Engineering"
+          ]
+        },
+        {
+          "name": "Chemical Engineering",
+          "specializations": ["Process Engineering", "Petrochemical Engineering"]
+        },
+        {
+          "name": "Biotechnology Engineering"
+        },
+        {
+          "name": "Aerospace Engineering"
+        },
+        {
+          "name": "Industrial Engineering"
+        },
+        {
+          "name": "Petroleum Engineering"
+        },
+        {
+          "name": "Mining Engineering"
+        },
+        {
+          "name": "Nanotechnology"
+        },
+        {
+          "name": "Robotics Engineering"
+        }
+      ]
+    },
+    "medical": {
+      "stream_name": "Medical and Health Sciences",
+      "degrees": [
+        {
+          "name": "Doctor of Medicine (MD)",
+          "duration": "3 years",
+          "eligibility": "After MBBS",
+          "specializations": [
+            "General Medicine",
+            "Pediatrics",
+            "Psychiatry",
+            "Dermatology",
+            "Anesthesiology",
+            "Radiology",
+            "Pathology",
+            "Community Medicine",
+            "Forensic Medicine",
+            "Microbiology",
+            "Pharmacology",
+            "Physiology",
+            "Anatomy",
+            "Biochemistry"
+          ]
+        },
+        {
+          "name": "Master of Surgery (MS)",
+          "duration": "3 years",
+          "eligibility": "After MBBS",
+          "specializations": [
+            "General Surgery",
+            "Orthopedics",
+            "Ophthalmology",
+            "ENT (Otorhinolaryngology)",
+            "Obstetrics and Gynecology"
+          ]
+        },
+        {
+          "name": "Master of Dental Surgery (MDS)",
+          "duration": "3 years",
+          "eligibility": "After BDS",
+          "specializations": [
+            "Oral and Maxillofacial Surgery",
+            "Orthodontics",
+            "Prosthodontics",
+            "Periodontics",
+            "Conservative Dentistry and Endodontics",
+            "Oral Pathology",
+            "Oral Medicine and Radiology",
+            "Pediatric Dentistry",
+            "Public Health Dentistry"
+          ]
+        },
+        {
+          "name": "Master of Pharmacy (M.Pharm)",
+          "duration": "2 years",
+          "specializations": [
+            "Pharmaceutics",
+            "Pharmaceutical Chemistry",
+            "Pharmacology",
+            "Pharmacognosy",
+            "Pharmaceutical Analysis",
+            "Clinical Pharmacy"
+          ]
+        },
+        {
+          "name": "Master of Public Health (MPH)",
+          "duration": "2 years"
+        },
+        {
+          "name": "Master of Physiotherapy (MPT)",
+          "duration": "2 years",
+          "specializations": [
+            "Orthopedics",
+            "Neurology",
+            "Sports Medicine",
+            "Cardiopulmonary"
+          ]
+        },
+        {
+          "name": "Master of Science in Nursing (M.Sc Nursing)",
+          "duration": "2 years",
+          "specializations": [
+            "Medical-Surgical Nursing",
+            "Pediatric Nursing",
+            "Psychiatric Nursing",
+            "Community Health Nursing",
+            "Obstetric and Gynecological Nursing"
+          ]
+        },
+        {
+          "name": "Master of Veterinary Science (M.V.Sc)",
+          "duration": "2 years"
+        },
+        {
+          "name": "Master of Occupational Therapy (MOT)",
+          "duration": "2 years"
+        }
+      ]
+    },
+    "law": {
+      "stream_name": "Law",
+      "degrees": [
+        {
+          "name": "Master of Laws (LLM)",
+          "duration": "1-2 years",
+          "specializations": [
+            "Corporate Law",
+            "Criminal Law",
+            "Constitutional Law",
+            "International Law",
+            "Intellectual Property Rights",
+            "Tax Law",
+            "Cyber Law",
+            "Human Rights Law",
+            "Environmental Law"
+          ]
+        }
+      ]
+    },
+    "architecture": {
+      "stream_name": "Architecture and Planning",
+      "degrees": [
+        {
+          "name": "Master of Architecture (M.Arch)",
+          "duration": "2 years",
+          "specializations": [
+            "Urban Design",
+            "Landscape Architecture",
+            "Construction Management",
+            "Sustainable Architecture",
+            "Housing"
+          ]
+        },
+        {
+          "name": "Master of Planning (M.Plan)",
+          "duration": "2 years",
+          "specializations": ["Urban Planning", "Regional Planning", "Transport Planning"]
+        }
+      ]
+    },
+    "hotel_management": {
+      "stream_name": "Hotel Management and Tourism",
+      "degrees": [
+        {
+          "name": "Master of Hotel Management (MHM)",
+          "duration": "2 years"
+        },
+        {
+          "name": "Master of Tourism Management (MTM)",
+          "duration": "2 years"
+        }
+      ]
+    },
+    "doctoral_degrees": {
+      "stream_name": "Doctoral Programs",
+      "degrees": [
+        {
+          "name": "Doctor of Philosophy (Ph.D.)",
+          "duration": "3-5 years",
+          "note": "Research-based doctoral degree available in all disciplines including Science, Arts, Commerce, Engineering, Medical, Law, Management, etc."
+        },
+        {
+          "name": "Doctor of Medicine (DM)",
+          "duration": "3 years",
+          "eligibility": "After MD/MS",
+          "note": "Super-specialty medical degree",
+          "specializations": [
+            "Cardiology",
+            "Neurology",
+            "Nephrology",
+            "Gastroenterology",
+            "Endocrinology",
+            "Medical Oncology",
+            "Clinical Immunology",
+            "Critical Care Medicine",
+            "Infectious Diseases"
+          ]
+        },
+        {
+          "name": "Master of Chirurgiae (MCh)",
+          "duration": "3 years",
+          "eligibility": "After MS",
+          "note": "Super-specialty surgical degree",
+          "specializations": [
+            "Neurosurgery",
+            "Cardiothoracic Surgery",
+            "Plastic Surgery",
+            "Pediatric Surgery",
+            "Urology",
+            "Surgical Oncology",
+            "Surgical Gastroenterology"
+          ]
+        },
+        {
+          "name": "Doctor of Science (D.Sc.)",
+          "duration": "Variable",
+          "note": "Higher doctoral degree in Science, awarded for significant research contributions"
+        },
+        {
+          "name": "Doctor of Literature (D.Litt.)",
+          "duration": "Variable",
+          "note": "Higher doctoral degree in Arts and Humanities, awarded for significant research contributions"
+        }
+      ]
+    }
+  }
+}
