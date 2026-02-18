@@ -4,6 +4,27 @@ A real-time voice agent built with OpenAI (LLM), Deepgram (STT + TTS), and Pytho
 
 ---
 
+## Architecture Overview
+
+![Architecture Overview](assets/architecture_overview.png)
+
+Incoming user messages pass through the **Session Analyzer**, which decides which memory strategy to activate. All three strategies feed into a **unified prompt builder** before the LLM call is made.
+
+---
+
+## The Context Stack
+
+![Context Stack](assets/context_stack.png)
+
+Every LLM call is built from four ordered layers:
+
+1. **System Prompt** — persona, rules, and knowledge base. Never trimmed.
+2. **Rolling Summary** — compressed record of what was discussed in earlier turns.
+3. **Recent Turns** — the exact conversation window (last N turns via sliding window).
+4. **Current User Input** — the live message being responded to.
+
+---
+
 ## Project Structure
 
 ```
@@ -14,6 +35,10 @@ voice_agent/
 ├── config.py                      # All constants and env vars in one place
 │
 ├── .env                           # API keys (never commit this)
+│
+├── assets/
+│   ├── architecture_overview.png  # Architecture diagram
+│   └── context_stack.png          # Context stack diagram
 │
 ├── agent/
 │   ├── __init__.py
@@ -92,6 +117,14 @@ voice_agent/
 
 ---
 
+## Architecture Overview
+
+![Architecture Overview](assets/architecture_overview.png)
+
+Incoming user messages pass through the **Session Analyzer**, which decides which memory strategy to activate. All three strategies feed into a **unified prompt builder** before the LLM call is made.
+
+---
+
 ## Session Management Strategy
 
 The agent uses a combined three-layer strategy for managing conversation history:
@@ -112,6 +145,19 @@ The agent uses a combined three-layer strategy for managing conversation history
 | History overflow | Turns since last summary >= 10 | Summarization |
 | Token overflow | Total tokens >= 2000 | Summarization |
 | Idle timeout | Silence >= 5 minutes | Summarization |
+
+---
+
+## The Context Stack
+
+![Context Stack](assets/context_stack.png)
+
+Every LLM call is built from four ordered layers:
+
+1. **System Prompt** — persona, rules, and knowledge base. Never trimmed.
+2. **Rolling Summary** — compressed record of what was discussed in earlier turns.
+3. **Recent Turns** — the exact conversation window (last N turns via sliding window).
+4. **Current User Input** — the live message being responded to.
 
 ---
 
