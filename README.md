@@ -6,7 +6,7 @@ A real-time voice agent built with OpenAI (LLM), Deepgram (STT + TTS), and Pytho
 
 ## Architecture Overview
 
-![Architecture Overview](assets/architecture_overview.png)
+![Architecture Overview](asset/architecture_overview.png)
 
 Incoming user messages pass through the **Session Analyzer**, which decides which memory strategy to activate. All three strategies feed into a **unified prompt builder** before the LLM call is made.
 
@@ -14,7 +14,7 @@ Incoming user messages pass through the **Session Analyzer**, which decides whic
 
 ## The Context Stack
 
-![Context Stack](assets/context_stack.png)
+![Context Stack](asset/context_stack.png)
 
 Every LLM call is built from four ordered layers:
 
