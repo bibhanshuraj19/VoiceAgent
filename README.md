@@ -98,7 +98,7 @@ voice_agent/
 
 ## Architecture Overview
 
-![Architecture Overview](assets/architecture_overview.png)
+![Architecture Overview]
 
 Incoming user messages pass through the **Session Analyzer**, which decides which memory strategy to activate. All three strategies feed into a **unified prompt builder** before the LLM call is made.
 
@@ -129,7 +129,7 @@ The agent uses a combined three-layer strategy for managing conversation history
 
 ## The Context Stack
 
-![Context Stack](assets/context_stack.png)
+![Context Stack]
 
 Every LLM call is built from four ordered layers:
 
