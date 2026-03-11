@@ -1,0 +1,44 @@
+{
+  "session_id": "d311c556-e7e1-4586-983e-8f6c944e00a0",
+  "started_at": "2026-03-11T09:12:57.517746+00:00",
+  "ended_at": "2026-03-11T09:13:25.527412+00:00",
+  "duration_seconds": 28.009666,
+  "total_turn_count": 7,
+  "turns": [
+    {
+      "role": "assistant",
+      "content": "Hi, I am your assistant. I can help you with queries regarding degree and program information for graduate and undergraduate studies.",
+      "timestamp": "2026-03-11T09:12:59.493220+00:00"
+    },
+    {
+      "role": "user",
+      "content": "Do have minister from the",
+      "timestamp": "2026-03-11T09:13:04.893329+00:00"
+    },
+    {
+      "role": "user",
+      "content": "CS",
+      "timestamp": "2026-03-11T09:13:07.275905+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "I am sorry, I can only help with questions about undergraduate and postgraduate degree programs.",
+      "timestamp": "2026-03-11T09:13:10.114031+00:00"
+    },
+    {
+      "role": "user",
+      "content": "Quit.",
+      "timestamp": "2026-03-11T09:13:12.997188+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "If you have any questions about degree programs or specializations, feel free to ask.",
+      "timestamp": "2026-03-11T09:13:14.836260+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm here to help.",
+      "timestamp": "2026-03-11T09:13:19.890815+00:00"
+    }
+  ]
+}
