@@ -32,6 +32,7 @@ class EventHandler:
             print("\n[Thinking...]")
 
         elif kind == "AgentStartedSpeaking":
+            self.audio.clear_interrupt()
             print("[Speaking...]")
 
     def on_error(self, err):

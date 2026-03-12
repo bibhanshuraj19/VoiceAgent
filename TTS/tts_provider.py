@@ -3,5 +3,5 @@ from deepgram.types.speak_settings_v1provider import SpeakSettingsV1Provider_Dee
 
 def get_tts_settings():
     return SpeakSettingsV1(
-        provider=SpeakSettingsV1Provider_Deepgram(type="deepgram", model="aura-2-thalia-en"),
+        provider=SpeakSettingsV1Provider_Deepgram(type="deepgram", model="aura-2-odysseus-en"),
     )
