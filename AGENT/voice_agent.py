@@ -13,7 +13,7 @@ class VoiceAgent:
     def __init__(self):
         self.config = AgentConfig()
         self.audio = AudioManager()
-        self.session = SessionManager(max_history=30)
+        self.session = SessionManager(max_history=50)
         self.events = EventHandler(self.audio, self.session)
         self._alive = threading.Event()
 
