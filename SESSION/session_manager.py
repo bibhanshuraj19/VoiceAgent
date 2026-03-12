@@ -6,8 +6,8 @@ from datetime import datetime, timezone
 class SessionManager:
     SESSION_DIR = "Zessions"
 
-    def __init__(self, session_id=None, max_history=30):
-        self.session_id = session_id or str(uuid.uuid4(), encoding="utf-8")
+    def __init__(self, session_id=None, max_history=50):
+        self.session_id = session_id or str(uuid.uuid4())
         self.max_history = max_history
         self.started_at = datetime.now(timezone.utc).isoformat()
         self.ended_at = None
