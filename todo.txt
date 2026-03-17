@@ -1,0 +1,36 @@
+rag implementation 
+production level -
+1. TTS 
+2. LLM
+3. TTS
+4. RAG - How will it be integerated in the code?
+
+Libraries - API's
+
+production level planning -
+
+STT alternative -
+1. OpenAI(Faster  Whisper) - (can be self hosted), minimal latency, "faster Whisper" has good price to performance ratio
+    can be hosted on self server gpu
+    no per call pricing 
+    support voice streaming(good for low latency) 
+
+2. NVIDIA NemO (ASR Models) -  (self hosted), good support with NVIDIA GPUs
+    has streaming capable models (Conformer-CTC, FastConformer)
+    More complex to set up but purpose-built for low-latency production
+
+TTS alternative - 
+Not a good idea to self host. will cause latency issues. Few providers 
+1. SarvamAI (support indian regional languages)
+2. ElevenLabs (little costly but support hindi language with natural sounding voices)
+3. Deepgram (no hindi language support but excellent for english)
+Kokoro TTS (self hosted) - 
+
+Reccomendation -
+STT: Faster-Whisper with streaming + VAD (Voice Activity Detection via Silero VAD) + interruption handling 
+LLM: Llama 3.1 8B served via vLLM with streaming enabled
+TTS: Kokoro or Piper depending on how much voice quality matters to your use case
+
+
+In this Reccomendation make a vector database for better retreival of knowledge 
+

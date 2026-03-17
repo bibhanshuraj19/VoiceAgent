@@ -1,5 +1,4 @@
 import os
-import json
 from dotenv import load_dotenv
 from deepgram.agent.v1.types import (
     AgentV1Settings,
@@ -22,18 +21,6 @@ class AgentConfig:
         if not self.api_key:
             raise ValueError("DEEPGRAM_API_KEY not set")
 
-    def _load_knowledge(self):
-        try:
-            with open("knowledge.json", encoding="utf-8") as f:
-                return json.load(f)
-        except Exception as e:
-            print(f"Could not load knowledge: {e}")
-            return {}
-
-    def _build_prompt(self):
-        knowledge = json.dumps(self._load_knowledge(), separators=(",", ":"))
-        return f"{SYSTEM_PROMPT}\n\nKnowledge Base:\n{knowledge}\n"
-
     def settings(self):
         return AgentV1Settings(
             audio=AgentV1SettingsAudio(
@@ -43,7 +30,7 @@ class AgentConfig:
             agent=AgentV1SettingsAgent(
                 language="en",
                 listen=get_stt_settings(),
-                think=get_llm_settings(self._build_prompt()),
+                think=get_llm_settings(SYSTEM_PROMPT),
                 speak=get_tts_settings(),
                 greeting=GREETING,
             ),
