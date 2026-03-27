@@ -21,7 +21,6 @@ class VoiceAgent:
         self._alive.set()
         self.audio.open_speaker()
         print("Starting connection...")
-
         with DeepgramClient(api_key=self.config.api_key).agent.v1.connect() as ws:
             print("Connected. Starting agent...\n")
 
