@@ -13,7 +13,7 @@ from AUDIO.audio_manager import AudioManager
 from STT.stt_provider import get_stt_settings
 from TTS.tts_provider import get_tts_settings
 from LLM.llm_provider import get_llm_settings
-from prompts import SYSTEM_PROMPT, GREETING
+from prompts import build_system_prompt, GREETING
 
 
 class AgentConfig:
@@ -42,7 +42,7 @@ class AgentConfig:
             agent=AgentV1SettingsAgent(
                 language="en",
                 listen=get_stt_settings(),
-                think=get_llm_settings(SYSTEM_PROMPT),
+                think=get_llm_settings(build_system_prompt()),
                 speak=get_tts_settings(),
                 greeting=GREETING,
             ),

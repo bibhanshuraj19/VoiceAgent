@@ -37,7 +37,7 @@ def create_calendar_event(args: dict[str, Any]) -> dict[str, Any]:
     if not title or not start_iso:
         return {"ok": False, "error": "title and start_iso are required"}
 
-    tz_name = os.getenv("GOOGLE_CALENDAR_TIMEZONE", "UTC")
+    tz_name = os.getenv("GOOGLE_CALENDAR_TIMEZONE", "Asia/Kolkata")
     tz = ZoneInfo(tz_name)
 
     start = datetime.fromisoformat(start_iso.replace("Z", "+00:00"))
@@ -48,7 +48,7 @@ def create_calendar_event(args: dict[str, Any]) -> dict[str, Any]:
         end = datetime.fromisoformat(end_iso.replace("Z", "+00:00"))
         end = end if end.tzinfo else end.replace(tzinfo=tz)
     else:
-        end = start + timedelta(minutes=int(args.get("duration_minutes") or 60))
+        end = start + timedelta(minutes=int(args.get("duration_minutes") or 30))
 
     if end <= start:
         return {"ok": False, "error": "end time must be after start time"}

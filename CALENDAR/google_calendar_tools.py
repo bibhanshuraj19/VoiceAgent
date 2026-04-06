@@ -5,7 +5,7 @@ CALENDAR_FUNCTION = ThinkSettingsV1FunctionsItem(
     description=(
         "Create an appointment on the user's Google Calendar when they ask to "
         "schedule, book, reserve, or add a meeting or appointment. Use a clear title. "
-        "start_iso must be ISO format with date and time."
+        "start_iso must be ISO  with date and time."
     ),
     parameters={
         "type": "object",
