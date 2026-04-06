@@ -1,14 +1,18 @@
 import time
 import threading
+
 import pyaudio
 from deepgram import DeepgramClient
 from deepgram.core.events import EventType
+
 from AUDIO.audio_manager import AudioManager
 from SESSION.session_manager import SessionManager
 from AGENT.agent_config import AgentConfig
 from AGENT.event_handler import EventHandler
 
+
 class VoiceAgent:
+    """Top-level orchestrator: wires audio, events, and the Deepgram WS."""
 
     def __init__(self):
         self.config = AgentConfig()
@@ -21,13 +25,15 @@ class VoiceAgent:
         self._alive.set()
         self.audio.open_speaker()
         print("Starting connection...")
+
         with DeepgramClient(api_key=self.config.api_key).agent.v1.connect() as ws:
             print("Connected. Starting agent...\n")
 
+            self.events.bind_ws(ws)
             ws.on(EventType.OPEN, self.events.on_open)
             ws.on(EventType.MESSAGE, self.events.on_message)
             ws.on(EventType.ERROR, self.events.on_error)
-            ws.on(EventType.CLOSE, lambda e: self.events.on_close(self._alive, e))
+            ws.on(EventType.CLOSE, lambda evt: self.events.on_close(self._alive, evt))
 
             ws.send_settings(self.config.settings())
 

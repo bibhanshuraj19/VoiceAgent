@@ -1,3 +1,6 @@
 .env
 __pycache__/
 Zessions/
+.venv/
+token.json
+client_secret*.json
