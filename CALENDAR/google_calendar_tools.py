@@ -5,22 +5,22 @@ CALENDAR_FUNCTION = ThinkSettingsV1FunctionsItem(
     description=(
         "Create an appointment on the user's Google Calendar when they ask to "
         "schedule, book, reserve, or add a meeting or appointment. Use a clear title. "
-        "start_iso must be ISO 8601 with date and time."
+        "start_iso must be ISO format with date and time."
     ),
     parameters={
         "type": "object",
         "properties": {
             "title": {
                 "type": "string",
-                "description": "Short event title or subject",
+                "description": "Title of the event given the context of the conversation",
             },
             "start_iso": {
                 "type": "string",
-                "description": "Start date-time in ISO 8601, e.g. 2026-04-05T14:30:00",
+                "description": "Start time in ISO format (e.g., 2024-03-20T09:00:00) in the user's timezone",
             },
             "end_iso": {
                 "type": "string",
-                "description": "End date-time in ISO 8601 (optional, omit if using duration)",
+                "description": "End time in ISO format (e.g., 2024-03-20T17:00:00) in the user's timezone",
             },
             "duration_minutes": {
                 "type": "integer",

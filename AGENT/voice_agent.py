@@ -12,8 +12,6 @@ from AGENT.event_handler import EventHandler
 
 
 class VoiceAgent:
-    """Top-level orchestrator: wires audio, events, and the Deepgram WS."""
-
     def __init__(self):
         self.config = AgentConfig()
         self.audio = AudioManager()
@@ -55,10 +53,6 @@ class VoiceAgent:
             finally:
                 self._alive.clear()
                 listener.join(timeout=2)
-                try:
-                    ws.close()
-                except Exception:
-                    pass
                 self.audio.close()
                 self.session.save()
                 print("Shutdown complete.")
