@@ -1,17 +1,12 @@
 import threading
 from typing import Any
-
 from deepgram.agent.v1.types.agent_v1function_call_request import AgentV1FunctionCallRequest
 from deepgram.agent.v1.types.agent_v1send_function_call_response import AgentV1SendFunctionCallResponse
-
 from AUDIO.audio_manager import AudioManager
-from CALENDAR.google_calendar import dispatch_function
+from CALENDAR import dispatch_function
 from SESSION.session_manager import SessionManager
 
-
 class EventHandler:
-    """Handles all incoming WebSocket events from the Deepgram agent."""
-
     def __init__(self, audio: AudioManager, session: SessionManager):
         self.audio = audio
         self.session = session
@@ -27,16 +22,13 @@ class EventHandler:
         if isinstance(message, bytes):
             self.audio.play(message)
             return
-
         if isinstance(message, AgentV1FunctionCallRequest):
             self._handle_function_call(message)
             return
-
         if isinstance(message, dict):
             kind = message.get("type")
         else:
             kind = getattr(message, "type", None)
-
         if kind == "ConversationText":
             self._handle_conversation_text(message)
         elif kind == "History":
@@ -86,11 +78,9 @@ class EventHandler:
         if not self._ws:
             print("Function call received but WebSocket not bound — skipping.")
             return
-
         for fn in request.functions:
             if not fn.client_side:
                 continue
-
             thread = threading.Thread(
                 target=self._execute_and_respond,
                 args=(fn.id, fn.name, fn.arguments),
