@@ -4,3 +4,4 @@ Zessions/
 .venv/
 token.json
 client_secret*.json
+.gitnexus
