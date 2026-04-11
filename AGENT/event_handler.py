@@ -1,4 +1,5 @@
 import threading
+import json
 from typing import Any
 from deepgram.agent.v1.types.agent_v1function_call_request import AgentV1FunctionCallRequest
 from deepgram.agent.v1.types.agent_v1send_function_call_response import AgentV1SendFunctionCallResponse
@@ -95,7 +96,6 @@ class EventHandler:
             result = dispatch_function(name, arguments)
             print(f"[Tool result: {result[:200]}]")
         except Exception as exc:
-            import json
             result = json.dumps({"ok": False, "error": str(exc)})
             print(f"[Tool error: {exc}]")
 

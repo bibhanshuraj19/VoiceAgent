@@ -2,28 +2,13 @@ import os
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 from dotenv import load_dotenv
-from google.auth.transport.requests import Request
-from google.oauth2.credentials import Credentials
-from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
+from CALENDAR.google_calendar_credentials import get_calendar_service
 
 load_dotenv()
 
 TZ_NAME = os.getenv("GOOGLE_CALENDAR_TIMEZONE", "Asia/Kolkata")
 TZ = ZoneInfo(TZ_NAME)
-
-
-def _get_service():
-    creds = Credentials(
-        token=None,
-        refresh_token=os.getenv("GOOGLE_REFRESH_TOKEN"),
-        client_id=os.getenv("GOOGLE_CLIENT_ID"),
-        client_secret=os.getenv("GOOGLE_CLIENT_SECRET"),
-        token_uri="https://oauth2.googleapis.com/token",
-        scopes=["https://www.googleapis.com/auth/calendar.events"],
-    )
-    creds.refresh(Request())
-    return build("calendar", "v3", credentials=creds, cache_discovery=False)
 
 
 def _parse_dt(iso_str):
@@ -37,7 +22,7 @@ def update_calendar_event(args):
         return {"ok": False, "error": "event_id is required"}
 
     try:
-        service = _get_service()
+        service = get_calendar_service()
         event = service.events().get(calendarId="primary", eventId=event_id).execute()
 
         title = (args.get("title") or "").strip()
