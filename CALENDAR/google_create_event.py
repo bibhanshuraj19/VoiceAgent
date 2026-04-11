@@ -29,7 +29,7 @@ def create_calendar_event(args):
     if end_iso:
         end = _parse_dt(end_iso)
     else:
-        end = start + timedelta(minutes=int(args.get("duration_minutes") or 30))
+        end = start + timedelta(minutes=int(args.get("duration_minutes") or 45))
 
     if end <= start:
         return {"ok": False, "error": "end time must be after start time"}
