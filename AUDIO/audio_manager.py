@@ -1,8 +1,6 @@
 import queue
 import threading
-
 import pyaudio
-
 
 class AudioManager:
     """Manages mic input and speaker output via PyAudio."""
