@@ -4,12 +4,11 @@ import pyaudio
 
 class AudioManager:
     """Manages mic input and speaker output via PyAudio."""
-
     RATE = 24000
     CHANNELS = 1
     CHUNK = 320
     WIDTH = 2
-
+    
     def __init__(self):
         self._pa = pyaudio.PyAudio()
         self._mic = None

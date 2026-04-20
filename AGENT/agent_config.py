@@ -15,7 +15,6 @@ from TTS.tts_provider import get_tts_settings
 from LLM.llm_provider import get_llm_settings
 from prompts import build_system_prompt, GREETING
 
-
 class AgentConfig:
     """Loads environment config and builds the Deepgram agent settings."""
 
