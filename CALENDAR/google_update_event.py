@@ -4,6 +4,7 @@ from zoneinfo import ZoneInfo
 from dotenv import load_dotenv
 from googleapiclient.errors import HttpError
 from CALENDAR.google_calendar_credentials import get_calendar_service
+from CALENDAR.google_event_lookup import resolve_event
 
 load_dotenv()
 
@@ -17,13 +18,14 @@ def _parse_dt(iso_str):
 
 
 def update_calendar_event(args):
-    event_id = (args.get("event_id") or "").strip()
-    if not event_id:
-        return {"ok": False, "error": "event_id is required"}
-
     try:
         service = get_calendar_service()
-        event = service.events().get(calendarId="primary", eventId=event_id).execute()
+        event, error = resolve_event(service, args)
+        if event is None:
+            return {"ok": False, "error": error or "Could not find that appointment."}
+        event_id = (event.get("id") or "").strip()
+        if not event_id:
+            return {"ok": False, "error": "Resolved event is missing an id."}
 
         title = (args.get("title") or "").strip()
         if title:
@@ -48,6 +50,16 @@ def update_calendar_event(args):
         elif end_iso := (args.get("end_iso") or "").strip():
             end = _parse_dt(end_iso)
             event["end"] = {"dateTime": end.isoformat(), "timeZone": TZ_NAME}
+
+        start_info = event.get("start") or {}
+        end_info = event.get("end") or {}
+        start_value = (start_info.get("dateTime") or "").strip()
+        end_value = (end_info.get("dateTime") or "").strip()
+        if start_value and end_value:
+            start_dt = _parse_dt(start_value)
+            end_dt = _parse_dt(end_value)
+            if end_dt <= start_dt:
+                return {"ok": False, "error": "end time must be after start time"}
 
         updated = service.events().update(
             calendarId="primary", eventId=event_id, body=event, sendUpdates="all"

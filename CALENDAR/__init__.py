@@ -2,7 +2,6 @@ import json
 from CALENDAR.google_create_event import create_calendar_event
 from CALENDAR.google_update_event import update_calendar_event
 from CALENDAR.google_delete_event import delete_calendar_event
-from CALENDAR.google_calendar_tools import ALL_FUNCTIONS
 
 _DISPATCH = {
     "create_calendar_event": create_calendar_event,

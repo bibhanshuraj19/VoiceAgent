@@ -1,8 +1,10 @@
-deepgram-sdk
+certifi>=2024.0
+deepgram-sdk>=3.0
 google-api-python-client>=2.0
 google-auth>=2.0
-google-auth-oauthlib>=1.0
 google-auth-httplib2>=0.2
-pydantic>=2.0
-python-dotenv>=1.0
+google-auth-oauthlib>=1.0
+httpx>=0.27
+openai>=1.40
 pyaudio>=0.2.14
+python-dotenv>=1.0
