@@ -3,7 +3,6 @@ from __future__ import annotations
 import mimetypes
 import queue
 import threading
-import time
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -146,47 +145,3 @@ class VoiceUIWebServer:
             self._thread.join(timeout=2)
         self._httpd = None
         self._thread = None
-
-
-def _run_demo() -> None:
-    bus = UIEventBus()
-    server = VoiceUIWebServer(bus)
-    server.start()
-    print(f"Voice UI demo: {server.url}")
-
-    stop = threading.Event()
-
-    def cycle() -> None:
-        script = [
-            ("connecting", None),
-            ("speaking", ("agent", "Hey, I am online. Ask me anything.")),
-            ("listening", None),
-            ("listening", ("user", "When is my next meeting?")),
-            ("thinking", None),
-            ("speaking", ("agent", "Your next meeting is at 3 PM today.")),
-            ("listening", None),
-        ]
-        idx = 0
-        while not stop.is_set():
-            state, line = script[idx % len(script)]
-            bus.publish_state(state)
-            if line is not None:
-                role, text = line
-                bus.publish_transcript(role, text)
-            idx += 1
-            time.sleep(2.2)
-
-    thread = threading.Thread(target=cycle, daemon=True, name="voice-ui-demo")
-    thread.start()
-    try:
-        while True:
-            time.sleep(1.0)
-    except KeyboardInterrupt:
-        pass
-    finally:
-        stop.set()
-        server.stop()
-
-
-if __name__ == "__main__":
-    _run_demo()
